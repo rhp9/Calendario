@@ -54,7 +54,7 @@ public class VerEventos extends AppCompatActivity
             {
 
            // String url= "https//quiet-tundra-44981.herokuapp.com/select.php";
-                String url="https://protected-lake-34779.herokuapp.com/";
+                String url="https://jsonplaceholder.typicode.com/posts/";
 
             //Instantiate the RequestQueue
             RequestQueue queue= Volley.newRequestQueue(that);
@@ -67,28 +67,36 @@ public class VerEventos extends AppCompatActivity
                             //Display the first 500 characters of the response String
 
                             Toast.makeText(getBaseContext(),"Response is: " + response.toString(),Toast.LENGTH_SHORT).show();
-                           /* try
+                            try
                             {
+                                jsonResponse = "";
+                                for (int i = 0; i < response.length(); i++) {
+
+                                    JSONObject person = (JSONObject) response
+                                            .get(i);
+
+                                    String name = person.getString("id");
+                                    String email = person.getString("title");
 
 
-                                JSONObject elemento= response.getJSONObject(0);
-                                String id = elemento.getString("Fecha");
-                                txtResponse.setText("lng :" + id);
+                                    jsonResponse += "Name: " + name + "\n\n";
+                                    jsonResponse += "Email: " + email + "\n\n\n";
 
-                                for(int i=0; i<response.length();i++)
-                                {
-                                    Toast.makeText(getBaseContext(),response.getString(i),Toast.LENGTH_SHORT).show();
+
 
                                 }
+
+                                txtResponse.setText(jsonResponse);
                             }
                             catch(JSONException e)
                             {
                                 Toast.makeText(getBaseContext(),"Fallo en la interpretacion del JSON",Toast.LENGTH_SHORT).show();
-                            }*/
+                            }
                         }
                     },new Response.ErrorListener(){
                 public void onErrorResponse(VolleyError error){
                     Log.d("Response","That didn't work");
+                    error.printStackTrace();
                     Toast.makeText(getBaseContext(),"that didnt work",Toast.LENGTH_SHORT).show();
                 }
             });
