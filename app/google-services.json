@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "928230890176",
+    "firebase_url": "https://midterm-52ee3.firebaseio.com",
+    "project_id": "midterm-52ee3",
+    "storage_bucket": "midterm-52ee3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928230890176:android:0e73a958dac96bd2",
+        "android_client_info": {
+          "package_name": "com.example.rhp.midterm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928230890176-mntu8q3o11bu2tdgnnle26hv9e02f0hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhvZwM7BFv-3C-SpI5or6ymhpSbXmdMbc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

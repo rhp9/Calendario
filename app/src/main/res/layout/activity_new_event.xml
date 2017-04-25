@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rhp.midterm.NewEvent">
+
+
+    <TextView
+        android:id="@+id/tvEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Crear Nuevo Evento"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tvDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32dp"
+        android:textAlignment="center"/>
+
+
+
+    <EditText
+        android:id="@+id/et_body"
+        android:lines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Evento"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/tvDia"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Sumbit"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="56dp"
+        android:layout_alignBaseline="@+id/bBack"
+        android:layout_alignBottom="@+id/bBack"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/bBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/tvDia" />
+
+    <EditText
+        android:id="@+id/etHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora"
+        android:ems="10"
+        android:inputType="time"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/et_body"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
