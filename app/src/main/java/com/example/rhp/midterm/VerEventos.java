@@ -53,8 +53,8 @@ public class VerEventos extends AppCompatActivity
             public void onClick(View v)
             {
 
-           // String url= "https//quiet-tundra-44981.herokuapp.com/select.php";
-                String url="https://jsonplaceholder.typicode.com/posts/";
+             String url= "https//quiet-tundra-44981.herokuapp.com/select.php";
+                String url2="https://jsonplaceholder.typicode.com/posts/";
 
             //Instantiate the RequestQueue
             RequestQueue queue= Volley.newRequestQueue(that);
@@ -66,7 +66,7 @@ public class VerEventos extends AppCompatActivity
                         public void onResponse(JSONArray response) {
                             //Display the first 500 characters of the response String
 
-                            Toast.makeText(getBaseContext(),"Response is: " + response.toString(),Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(getBaseContext(),"Response is: " + response.toString(),Toast.LENGTH_SHORT).show();
                             try
                             {
                                 jsonResponse = "";
@@ -75,12 +75,15 @@ public class VerEventos extends AppCompatActivity
                                     JSONObject person = (JSONObject) response
                                             .get(i);
 
-                                    String name = person.getString("id");
-                                    String email = person.getString("title");
+                                    String fecha = person.getString("Fecha");
+                                    String hora = person.getString("Hora");
+                                    String id = person.getString("Fecha");
+                                    String body = person.getString("Body");
 
-
-                                    jsonResponse += "Name: " + name + "\n\n";
-                                    jsonResponse += "Email: " + email + "\n\n\n";
+                                    jsonResponse += "Id Evento: " + id + "\n\n";
+                                    jsonResponse += "Fecha: " + fecha + "\n\n";
+                                    jsonResponse += "Hora: " + hora + "\n\n";
+                                    jsonResponse += "Body: " + body + "\n\n\n";
 
 
 
